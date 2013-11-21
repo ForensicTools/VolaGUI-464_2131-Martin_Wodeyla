@@ -1,0 +1,60 @@
++----------+----------+----------+----------+----------+----------+
+|								                                                  |
+|		  VolaGUI version 1.0 11/21/2013		                          |
+|    The Volatility Framework implemented in a Powershell GUI	    |
+|								                                                  |
++----------+----------+----------+----------+----------+----------+
+
+DOCUMENTATION:
+
+
+CHANGELOG
++----------+----------+----------+
+
+10/11/2013	Project began.  Basic GUI functionality and format.
+
+11/10/2013	Volatility linked with GUI.  Commands implemented 
+		        without flags.
+
+
+
+VolaGUI.config File
++----------+----------+----------+
+
+1.	File has known command groups as headers to the commands
+	  within that group. (CMDDLL, CMDPROCMEM, CMDKERNEL, CMDGUI, 
+	  CMDNET, CMDREG, CMDMAL)
+
+2.	Each command within each group must be in the following 
+  	format: 'COMMAND:COMMAND_DESCRIPTION:FLAGS'.
+	  (modules:Print list of loaded modules:P)
+
+3.	Exceptions to the command formats exist within the flags
+	  field.  Because almost all commands use the -f and 
+  	--profile flags, these options are not included in the 
+	  config file.  Instead these are hardcoded in.  Cases
+	  not following this can be seen below
+
+4.	All flags containing a single letter exist as they are in 
+	  the Volatility documentation Certain commands use options 
+	  such as '--offset' which are not easily dealt with in the 
+	  config file.  Instead, single letters special to VolaGUI 
+	  are used in the config file.  These cases can be 
+	  seen below:
+
+  	-q == --offset=
+	  -Q == --physical-offset=
+  	-M == -max_history=
+	  -N == (No --profile option)
+	  -e == --save-evt
+	  -L == --LEAK
+	  -R == --REDR
+	  -X == --regex=
+	  -B == --base=
+  	-v == --verbose
+
+
+Licensing
++----------+----------+----------+
+
+VolaGUI is licensed under The GNU General Public License v2
