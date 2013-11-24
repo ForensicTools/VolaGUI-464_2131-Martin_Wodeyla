@@ -15,6 +15,8 @@ CHANGELOG
 
 11/10/2013	Volatility linked with GUI.  Commands implemented 
 		        without flags.
+		        
+11/24/2013	Options added in
 
 
 
@@ -26,12 +28,12 @@ VolaGUI.config File
 	  CMDNET, CMDREG, CMDMAL)
 
 2.	Each command within each group must be in the following 
-  	format: 'COMMAND:COMMAND_DESCRIPTION:FLAGS'.
+  	  format: 'COMMAND:COMMAND_DESCRIPTION:FLAGS'.
 	  (modules:Print list of loaded modules:P)
 
 3.	Exceptions to the command formats exist within the flags
 	  field.  Because almost all commands use the -f and 
-  	--profile flags, these options are not included in the 
+  	  --profile flags, these options are not included in the 
 	  config file.  Instead these are hardcoded in.  Cases
 	  not following this can be seen below
 
@@ -42,16 +44,24 @@ VolaGUI.config File
 	  are used in the config file.  These cases can be 
 	  seen below:
 
-  	-q == --offset=
-	  -Q == --physical-offset=
-  	-M == -max_history=
-	  -N == (No --profile option)
-	  -e == --save-evt
-	  -L == --LEAK
-	  -R == --REDR
-	  -X == --regex=
-	  -B == --base=
-  	-v == --verbose
+  	  q == --offset=
+	  Q == --physical-offset=
+  	  M == -max_history=
+	  N == (No --profile option)
+	  e == --save-evt
+	  L == --LEAK
+	  R == --REDR
+	  X == --regex=
+	  B == --base=
+  	  v == --verbose
+  	  * == no additinal options besides --profile and -f
+
+
+VolaGUI Activity Log
++----------+----------+----------+
+
+All activity and commands run within VolaGUI are recorded in the 
+user's APPDATA\VolaGUI directory.  This file is named activity.log
 
 
 Licensing
