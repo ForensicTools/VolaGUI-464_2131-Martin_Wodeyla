@@ -22,13 +22,16 @@ General Usage Notes:
 Running VolaGUI:
 +----------+----------+----------+
 
-Starting the GUI through the Windows GUI:
+Issue the command 'Set-RemoteExecution Unrestricted' to allow the GUI to run through
+either of the three methods listed below
+
+1.  Starting the GUI through the Windows GUI:
 	-Right click the VolaGUI.ps1 file -> "Run with PowerShell"
 
-Starting the GUI through the Command Line:
+2.  Starting the GUI through the Command Line:
 	-Navigate to the directory containing the VolaGUI.ps1 PowerShell script
 	-powershell ./VolaGUI.ps1
 
-Starting the GUI through the PowerShell Command Line:
+3.  Starting the GUI through the PowerShell Command Line:
 	-Navigate to the directory containing the VolaGUI.ps1 PowerShell script
 	-./VolaGUI.ps1
