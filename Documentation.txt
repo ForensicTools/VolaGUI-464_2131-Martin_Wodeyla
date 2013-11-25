@@ -1,6 +1,6 @@
 +----------+----------+----------+----------+----------+----------+
 |								                                                  |
-|		  VolaGUI version 1.0 11/21/2013		                          |
+|		  VolaGUI version 1.0 11/24/2013		                          |
 |    The Volatility Framework implemented in a Powershell GUI	    |
 |								                                                  |
 +----------+----------+----------+----------+----------+----------+
@@ -16,28 +16,31 @@ CHANGELOG
 11/10/2013	Volatility linked with GUI.  Commands implemented 
 		        without flags.
 		        
-11/24/2013	Options added in
+11/24/2013	Options added in, initial functionaility complete
 
 
 
 VolaGUI.config File
 +----------+----------+----------+
 
-1.	File has known command groups as headers to the commands
+1. 	The first line of specifies where the Volatility Framework executable is located.
+	  Edit this value with the full path when running VolaGUI.
+
+2.	File has known command groups as headers to the commands
 	  within that group. (CMDDLL, CMDPROCMEM, CMDKERNEL, CMDGUI, 
 	  CMDNET, CMDREG, CMDMAL)
 
-2.	Each command within each group must be in the following 
+3.	Each command within each group must be in the following 
   	  format: 'COMMAND:COMMAND_DESCRIPTION:FLAGS'.
 	  (modules:Print list of loaded modules:P)
 
-3.	Exceptions to the command formats exist within the flags
+4.	Exceptions to the command formats exist within the flags
 	  field.  Because almost all commands use the -f and 
   	  --profile flags, these options are not included in the 
 	  config file.  Instead these are hardcoded in.  Cases
 	  not following this can be seen below
 
-4.	All flags containing a single letter exist as they are in 
+5.	All flags containing a single letter exist as they are in 
 	  the Volatility documentation Certain commands use options 
 	  such as '--offset' which are not easily dealt with in the 
 	  config file.  Instead, single letters special to VolaGUI 
@@ -54,6 +57,8 @@ VolaGUI.config File
 	  B == --base=
   	  v == --verbose
   	  * == no additinal options besides --profile and -f
+
+6.	Ensure that volagui.config is in the same folder as VolaGUI.ps1.
 
 
 VolaGUI Activity Log
