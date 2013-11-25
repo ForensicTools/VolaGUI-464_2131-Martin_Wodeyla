@@ -21,6 +21,7 @@ General Usage Notes:
 -The general page contains a textbox to run custom volatility commands if the GUI does not provide the command in the drop down. 
 -When selecting the Output to File check box, this will output all commands to GUI window and to file called volagui.txt.
 -GUI will freeze while Volatility is executing commands in the background. When Volatility has finished running, VolaGUI will unfreeze.
+-Must download Volatility Framework executable for VolaGUI to be functional
 
 
 
