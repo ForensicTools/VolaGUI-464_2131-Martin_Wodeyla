@@ -47,7 +47,6 @@ VolaGUI.config File
   	  q == --offset=
 	  Q == --physical-offset=
   	  M == -max_history=
-	  N == (No --profile option)
 	  e == --save-evt
 	  L == --LEAK
 	  R == --REDR
